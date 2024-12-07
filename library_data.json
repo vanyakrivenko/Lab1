@@ -1,0 +1,31 @@
+{
+    "Users": [
+        {
+            "Name": "Ivan",
+            "Age": 30,
+            "ReaderID": 1
+        },
+        {
+            "Name": "Ann",
+            "Age": 25,
+            "ReaderID": 2
+        }
+    ],
+    "Librarians": [
+        {
+            "Name": "Olga",
+            "LibrarianID": 1
+        }
+    ],
+    "Books": [
+        {
+            "Title": "Python Programming",
+            "Author": {
+                "AuthorName": "John Doe",
+                "BirthYear": 1975
+            },
+            "Genre": "Programming",
+            "PublicationYear": 2020
+        }
+    ]
+}
