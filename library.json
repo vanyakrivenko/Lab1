@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Max",
+        "Age": 67,
+        "ReaderID": 12
+    },
+    {
+        "Name": "Lopa",
+        "LibrarianID": 87
+    },
+    {
+        "Title": "Mary Poppins",
+        "Author": {
+            "AuthorName": "Pamela Lindon",
+            "BirthYear": 1899
+        },
+        "Genre": "Fairy Tale",
+        "PublicationYear": 1934
+    }
+]
