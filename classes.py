@@ -6,7 +6,7 @@ class Author:
   def to_dict(self):
     return {
       "AuthorName": self.name,
-      "BirthYear": birth_year
+      "BirthYear": self.birth_year
     }
 
 class Book:
@@ -36,7 +36,7 @@ class Reader:
       "ReaderID":self.reader_id
     }
 class Librarian:
-  def __init__(self, anme:str, librarian_id: int):
+  def __init__(self, name:str, librarian_id: int):
     self.name = name
     self.librarian_id = librarian_id
 
