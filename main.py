@@ -7,34 +7,34 @@ def main():
   data = []
   serializer = None
 
-while True:
-  print("\nВы хотите создать новый файл или загрузить существующий?")
-  print("1. Создать новый файл")
-  print("2. Загрузить существующий файл")
-  print("3. Выйти из приложения")
+  while True:
+    print("\nВы хотите создать новый файл или загрузить существующий?")
+    print("1. Создать новый файл")
+    print("2. Загрузить существующий файл")
+    print("3. Выйти из приложения")
 
-  choice = input("Введите номер действия: ")
+    choice = input("Введите номер действия: ")
 
-  if choice == "1":
-    data = []
-    serializer = JSONSerializer(data)
-    print("Новый файл создан.")
-    manage_library(data, serializer)
-
-  elif choise == "2":
-    file_name = input("Введите название существующего файла (с расширением .json): ")
-    try:
-      data = serializer.load_from_json(file_name)
+    if choice == "1":
+      data = []
       serializer = JSONSerializer(data)
-      print("Файл успешно загружен.")
+      print("Новый файл создан.")
       manage_library(data, serializer)
-    except Exception as e:
-      print(f"Ошибка при загрузке файла: {e}")
-  elif choice == "3":
-    print("Выход из приложения До свидания!")
-    break
-  else:
-    print("Неверный выбор. Попробуйте снова.")
+
+    elif choice == "2":
+      file_name = input("Введите название существующего файла (с расширением .json): ")
+      try:
+        data = serializer.load_from_json(file_name)
+        serializer = JSONSerializer(data)
+        print("Файл успешно загружен.")
+        manage_library(data, serializer)
+      except Exception as e:
+        print(f"Ошибка при загрузке файла: {e}")
+    elif choice == "3":
+      print("Выход из приложения До свидания!")
+      break
+    else:
+      print("Неверный выбор. Попробуйте снова.")
 
 def manage_library(data, serializer):
   while True:
@@ -55,7 +55,7 @@ def manage_library(data, serializer):
             reader = Reader(name = name, age= age,reader_id=reader_id)
             data.append(reader)
             print("Читатель добавлен.")
-        elif choice = "2":
+        elif choice == "2":
             name = input("Введите имя библиотекаря: ")
             librarian_id=int(input("Введите ID библиотекаря: "))
             librarian = Librarian(name = name, librarian_id = librarian_id)
@@ -68,7 +68,7 @@ def manage_library(data, serializer):
             genre = input("Введите жанр книги: ")
             publication_year = int(input("Введите год издания книги: "))
             author = Author(name=author_name, birth_year=author_birth_year)
-            book = Book(title=title,author = author,genre = genre, publication_year= publication_year
+            book = Book(title=title,author = author,genre = genre, publication_year= publication_year)
             data.append(book)
             print("Книга добавлена. ")
         elif choice == "4":
