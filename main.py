@@ -5,7 +5,7 @@ from serializer import JSONSerializer
 def main():
   print("Добро пожаловать в систему управления библиотекой!")
   data = []
-  serializer = None
+  serializer = JSONSerializer(data)
 
   while True:
     print("\nВы хотите создать новый файл или загрузить существующий?")
